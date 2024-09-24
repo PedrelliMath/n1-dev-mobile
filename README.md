@@ -37,12 +37,18 @@ git clone https://github.com/PedrelliMath/n1-dev-mobile.git & cd n1-dev-mobile
 
 ## Como rodar
 
+Versão do **Flutter** e **Dart**
+`Flutter 3.24.0 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 80c2e84975
+Engine • revision b8800d88be
+Tools • Dart 3.5.0 • DevTools 2.37.2`
+
 - Inicialize seu emulador ou utilize a versão web
 
 - Utilizando o emulador:
 
 ```console
-emulator -avd Pixel7Pro
+emulator -avd {virtual_device_name}
 ```
 
 - Execute o comando flutter devices e selecione o emulador
@@ -51,11 +57,17 @@ emulator -avd Pixel7Pro
 flutter devices
 ```
 
-- Se o emulador estiver rodando, selecionar Android SDK.
+- Se o emulador estiver rodando, selecione Android SDK.
   Ou selecione a versão web.
 
 - Execute o comando flutter run
 
 ```console
 flutter run
+```
+
+- Para gerar o Apk
+
+```console
+flutter build apk
 ```
