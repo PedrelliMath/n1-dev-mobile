@@ -16,3 +16,6 @@ O aplicativo em questão foi desenvolvido para registrar a quantidade de água q
  + Navegação: Entre tela de controle diário e histórico de consumo.
 
 ![image](https://github.com/user-attachments/assets/e33357be-47e7-436d-a104-aae94ea8ed52)
+
+![image](https://github.com/user-attachments/assets/a487cae2-ac7f-448a-b72b-f123496063d8)
+
