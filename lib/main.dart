@@ -30,7 +30,17 @@ void main(){
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light
+        colorScheme: const ColorScheme(
+        brightness: Brightness.light,
+        error: Color(0xFFfb6f24),
+        onError: Color(0xFFfb6f24),
+        surface: Color(0xFFFFFFFF),
+        onSurface: Color(0xFF5191c1),
+        primary: Color(0xFF5191c1),
+        onPrimary: Color(0xFF0a4b75),
+        secondary: Color(0xFF1e6495),
+        onSecondary: Color(0xFF1e6495),
+        tertiary: Color(0xFF0a4b75)),
       ),
       title: "WaterC",
       initialRoute: '/',

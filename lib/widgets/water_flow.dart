@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:pac_iv/repository/water_repository.dart';
 
@@ -255,7 +256,9 @@ class _WaterFlowState extends State<WaterFlow>
         return AlertDialog(
           title: const Text('Adicione água'),
           content: TextField(
-            decoration: const InputDecoration(hintText: 'Quantidade de água'),
+            keyboardType: TextInputType.number,
+            inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
+            decoration: const InputDecoration(hintText: 'Quantidade de água ml'),
             onChanged: (value) {
               input = value;
             },
@@ -272,7 +275,7 @@ class _WaterFlowState extends State<WaterFlow>
                 _addWaterToList(input, meta); // Adiciona o valor à lista
                 Navigator.of(context).pop(); // Fecha a caixa de diálogo
               },
-              child: const Text('Enter'),
+              child: const Text('Adicionar'),
             ),
           ],
         );
@@ -305,7 +308,7 @@ class _WaterFlowState extends State<WaterFlow>
                   style: TextStyle(
                   fontWeight: FontWeight.w600,
                   wordSpacing: 1,
-                  color: Colors.blueGrey.withOpacity(.7),
+                  color: Color(0XFF0a4b75),
                 ),
                 textScaleFactor: 3,
               ),

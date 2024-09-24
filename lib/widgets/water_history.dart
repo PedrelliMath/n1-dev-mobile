@@ -4,15 +4,18 @@ import 'package:pac_iv/widgets/date_picker.dart';
 
 
 class WaterListItem extends StatelessWidget {
-  DateTime date;
-  double quantidade;
-  WaterListItem({super.key, required this.date, required this.quantidade});
+  final DateTime date;
+  final double quantidade;
+  const WaterListItem({super.key, required this.date, required this.quantidade});
 
   @override
   Widget build(BuildContext context) {
+    var dayFormated = date.day.toString().padLeft(2, '0');
+    var mounthFormated = date.month.toString().padLeft(2, '0');
+
     return Card(
       child: ListTile(
-        title: Text("${quantidade.toStringAsFixed(2)}ml ${date.day}/${date.month}/${date.year}"),
+        title: Text("${quantidade.toStringAsFixed(2)}ml $dayFormated/$mounthFormated/${date.year}"),
       )
     );
   }
@@ -31,12 +34,15 @@ class _WaterHistory extends State<WaterHistory> {
   late List<WaterListItem> waterListItemWidgetList;
 
   List<WaterListItem> getWaterListItemWidget(List<WaterDrink> waterList) {
-    return waterList.reversed.map((water) {
+    List<WaterListItem> waterListItems = waterList.reversed.map((water) {
       return WaterListItem(
         date: water.createdAt,
         quantidade: water.quantidade,
       );
     }).toList();
+    
+    waterListItems.sort((a, b) => b.date.compareTo(a.date));
+    return waterListItems;
   }
  
   @override
@@ -53,7 +59,7 @@ class _WaterHistory extends State<WaterHistory> {
 
   void filterWaterList(DateTime dateFilter){
     setState(() {
-          waterListItemWidgetList = waterListItemWidgetList.where((i) => isSameDate(i.date, dateFilter)).toList();
+          waterListItemWidgetList = getWaterListItemWidget(widget.waterRepository.getSortedListByDate(dateFilter));
     });
   }
 
@@ -67,7 +73,10 @@ class _WaterHistory extends State<WaterHistory> {
             body: Column(
               children:[
                 Padding(padding: EdgeInsets.all(10.0), child: DatePickerExample(getDateCallback: filterWaterList)), 
-                Expanded(child:ListView(children: waterListItemWidgetList))
+                Expanded(
+                  child: waterListItemWidgetList.isEmpty
+                    ? Center(child: Text('Nenhum item encontrado'))
+                    : ListView(children: waterListItemWidgetList))
               ]
             )
           );

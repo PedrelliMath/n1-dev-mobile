@@ -24,7 +24,11 @@ class WaterDrinkRepository{
   }
 
   List<WaterDrink> getDrinkList(){
-    return drinkList;
+    return List.from(drinkList);
+  }
+
+  List<WaterDrink> getSortedListByDate(DateTime dateFilter){
+    return getDrinkList().where((item) => isSameDate(item.createdAt, dateFilter)).toList();
   }
 
   double getTotalWaterCount(){
