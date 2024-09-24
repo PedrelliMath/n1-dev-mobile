@@ -2,13 +2,30 @@
 
 Projeto desenvolvido para conteplar a primeira nota da matéria de Desenvolvimento Mobile.
 
-O aplicativo em questão foi desenvolvido para registrar a quantidade de água que bebeu durante o dia e acompanhar o consumo diário. Para seu desenvolvimento, o aplicativo contempla os seguites itens:
+Este aplicativo busca controlar a quantidade de água bebida no dia, permitindo que o usuário
+crie metas e verifique a quantidade de água tomada todos os dias.
 
 ## Principais funcionalidades
 
 - Adicionar quantidade de água
 
 ![adicionar](./assets/gifs/adicionar.gif)
+
+- Zerar quantidade do dia
+
+![zerar](./assets/gifs/zerar.gif)
+
+- Setar meta diária
+
+![meta](./assets/gifs/meta.gif)
+
+- Verificar histórico de registros
+
+![historici](./assets/gifs/historico.gif)
+
+## Paleta de cores utilizada
+
+![color](./assets/collor.png)
 
 ## Como instalar
 
@@ -22,6 +39,8 @@ git clone https://github.com/PedrelliMath/n1-dev-mobile.git & cd n1-dev-mobile
 
 - Inicialize seu emulador ou utilize a versão web
 
+- Utilizando o emulador:
+
 ```console
 emulator -avd Pixel7Pro
 ```
@@ -31,6 +50,9 @@ emulator -avd Pixel7Pro
 ```console
 flutter devices
 ```
+
+- Se o emulador estiver rodando, selecionar Android SDK.
+  Ou selecione a versão web.
 
 - Execute o comando flutter run
 
