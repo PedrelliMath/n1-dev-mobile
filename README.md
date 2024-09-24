@@ -1,4 +1,7 @@
-N1 - Desenvolvimento Mobile
+    <title>N1 - Desenvolvimento Mobile</title>
+
+
+
 Este projeto foi desenvolvido para a primeira avaliação da disciplina de Desenvolvimento Mobile. O aplicativo tem como objetivo ajudar o usuário a registrar e acompanhar a quantidade de água consumida ao longo do dia.
 
 Funcionalidades Principais
