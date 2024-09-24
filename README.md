@@ -1,6 +1,6 @@
-# N1 - Desenvolvimento Mobile
+# N1 - Desenvolvimento Mobile 
 
-Projeto desenvolvido para conteplar a primeira nota da materia de Desenvolvimento Mobile.
+Projeto desenvolvido para conteplar a primeira nota da matéria de Desenvolvimento Mobile.
 
 O aplicativo em questão foi desenvolvido para registrar a quantidade de água que bebeu durante o dia e acompanhar o consumo diário. Para seu desenvolvimento, o aplicativo contempla os seguites itens:
 
@@ -15,8 +15,4 @@ Estilização: Customização dos gráficos e indicadores de água.
 Botões: Para ajustar consumo e reiniciar o contador.
 Navegação: Entre tela de controle diário e histórico de consumo.
 
-Dentre a paleta sorteada <https://paletadecores.com/paleta/fb6f24/8ca315/5191c1/1e6495/0a4b75/>, escolhemos as seguinte cores:
-
-Cor primária: 
-Cor secundária:
-Cor terciária: 
+![image](https://github.com/user-attachments/assets/e33357be-47e7-436d-a104-aae94ea8ed52)
