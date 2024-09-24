@@ -61,6 +61,7 @@ class _WaterHistory extends State<WaterHistory> {
   Widget build(BuildContext context) {
     return Scaffold(
             appBar: AppBar(
+              backgroundColor: Color(0xFF1E6495),
               title: const Text('Histórico'),
             ),
             body: Column(

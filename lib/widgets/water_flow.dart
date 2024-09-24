@@ -20,7 +20,7 @@ class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint()
-      ..color = const Color(0xff3B6ABA).withOpacity(.8)
+      ..color = const Color(0xFF0A4B75).withOpacity(.8)
       ..style = PaintingStyle.fill;
 
     var path = Path()
@@ -293,6 +293,7 @@ class _WaterFlowState extends State<WaterFlow>
             ],
           ),
           floatingActionButton: FloatingActionButton(
+            backgroundColor: Color(0xFFFB6F24),
             child: Icon(Icons.add),
             onPressed: _showInputDialog,
           ),
